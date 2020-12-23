@@ -14,7 +14,7 @@ public class ArticleLoader extends AsyncTaskLoader<List<Article>> {
     //query URL
     private String mUrl;
 
-    //constructs a new {@link StormLoader}
+    //constructs a new {@link ArticleLoader}
     //@param context of the activity, @param url to load data from
     public ArticleLoader(Context context, String url) {
         super(context);
@@ -33,7 +33,7 @@ public class ArticleLoader extends AsyncTaskLoader<List<Article>> {
             return null;
         }
 
-        //perform the network request, parse the response and extract the list of storms
+        //perform the network request, parse the response and extract the list of articles
         List<Article> articles = QueryUtils.fetchArticleData(mUrl);
         return articles;
     }

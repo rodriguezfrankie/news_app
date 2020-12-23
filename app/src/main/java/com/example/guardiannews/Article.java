@@ -1,6 +1,6 @@
 package com.example.guardiannews;
 
-//an {@link Article} object contains information related to one storm
+//an {@link Article} object contains information related to one article
 public class Article {
 
     //news title

@@ -159,11 +159,11 @@ public final class QueryUtils {
                 //extract the value for the key called areaDesc
                 String url = results.getString("webUrl");
 
-                //create a new {@link Article} object with location, headline, event, and severity
+                //create a new {@link Article} object with section name, web title, web publication date, and web url
                 //from the JSON response
                 Article article = new Article(type, title, date, url);
 
-                //add the new {@link Storm} to the list storm
+                //add the new {@link Article} to the list article
                 articles.add(article);
             }
 
@@ -171,10 +171,10 @@ public final class QueryUtils {
             //if an error is thrown when executing any of the above statements in the try block
             //catch the exception here so the app doesnt crash. print a log message
             //witht the exception message
-            Log.e("QueryUtils", "Problem parsing the storm JSOn results, e");
+            Log.e("QueryUtils", "Problem parsing the article JSOn results, e");
         }
 
-        //return the list of storms
+        //return the list of articles
         return articles;
     }
 }

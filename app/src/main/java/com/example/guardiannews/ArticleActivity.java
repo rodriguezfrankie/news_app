@@ -66,7 +66,6 @@ public class ArticleActivity extends AppCompatActivity
         prefs.registerOnSharedPreferenceChangeListener(this);
 
         // Set an item click listener on the ListView, which sends an intent to a web browser
-        // to open a website with more information about the selected earthquake.
         articleListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
@@ -76,7 +75,7 @@ public class ArticleActivity extends AppCompatActivity
                 // Convert the String URL into a URI object (to pass into the Intent constructor)
                 Uri articleUri = Uri.parse(currentArticle.getUrl());
 
-                // Create a new intent to view the earthquake URI
+                // Create a new intent to view the Guardian URI
                 Intent websiteIntent = new Intent(Intent.ACTION_VIEW, articleUri);
 
                 // Send the intent to launch a new activity
@@ -140,12 +139,6 @@ public class ArticleActivity extends AppCompatActivity
         //set empty state text to display "no articles found"
         mEmptyStateTextView.setText(R.string.no_articles);
 
-        //if there is a valid list of {@link Article} then add them to the adapters
-        //data set. this will trigger the ListView to update
-       // if (articles != null && !articles.isEmpty()) {
-            //madapter.addAll(articles)
-       //     updateUi(articles);
-       // }
     }
 
     @Override

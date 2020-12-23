@@ -32,7 +32,7 @@ public class ArticleAdapter extends ArrayAdapter<Article> {
                     R.layout.article_list_item, parent, false);
         }
 
-        //find storm at the given position in the list of storms
+        //find article at the given position in the list of articles
         Article currentArticle = getItem(position);
 
         //find the textview with id news_type
